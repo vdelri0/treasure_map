@@ -6,19 +6,13 @@ map = [line1, line2, line3]
 print("Hiding your treasure! X marks the spot.")
 
 position = input() # Where do you want to put the treasure?
-letter = position[0]
+letter = position[0].lower()
 number = int(position[1])
 
-if letter == 'A':
-    letter = 0
-elif letter == 'B':
-    letter = 1
-elif letter == 'C':
-    letter = 2
-else:
-    print("Ingrese una letra valida.")
+abc = ["a", "b", "c"]
 
-print(letter, number)
-map[number-1][letter] = 'X'
+letter_index = abc.index(letter)
+
+map[number-1][letter_index] = 'X'
 
 print(f"{line1}\n{line2}\n{line3}")
